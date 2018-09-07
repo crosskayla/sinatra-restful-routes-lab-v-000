@@ -2,4 +2,4 @@
 <p>Ingredients: <%= @recipe.ingredients %></p>
 <p>Cook Time: <%= @recipe.cook_time %></p>
 
-<a href="/recipes/#{@recipe.id}/delete">Delete Recipe</a>
+<a href="/recipes/<%= @recipe.id %>/delete">Delete Recipe</a>
