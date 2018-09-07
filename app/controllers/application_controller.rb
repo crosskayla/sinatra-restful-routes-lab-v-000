@@ -16,8 +16,7 @@ class ApplicationController < Sinatra::Base
     @recipe = Recipe.new(name: params[:name], ingredients: params[:ingredients], cook_time: params[:cook_time])
     if @recipe
       @recipe.save
-      params[:id] = @recipe.id
-      redirect '/recipes/:id'
+      redirect "/recipes/#{@recipe.id}"
     else
       redirect '/recipes/new'
     end
