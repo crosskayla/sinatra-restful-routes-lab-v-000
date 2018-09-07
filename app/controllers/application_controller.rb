@@ -25,7 +25,7 @@ class ApplicationController < Sinatra::Base
     erb :index
   end
 
-  get 'recipes/:id' do
+  get '/recipes/:id' do
     @recipe = Recipe.find(params[:id])
     if @recipe
       erb :show
