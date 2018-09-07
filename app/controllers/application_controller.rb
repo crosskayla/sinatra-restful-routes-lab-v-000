@@ -12,7 +12,10 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/recipes/' do
+  end
 
+  get '/recipes' do
+    Recipe.all 
   end
 
   get 'recipes/:id' do
