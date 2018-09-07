@@ -22,11 +22,12 @@ class ApplicationController < Sinatra::Base
 
   get '/recipes' do
     @recipes = Recipe.all
+    erb :show
   end
 
   get 'recipes/:id' do
     recipe = Recipe.find(params[:id])
-    if recipe 
+    if recipe
       @recipes = [recipe]
       erb :show
     else
