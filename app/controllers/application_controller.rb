@@ -29,8 +29,6 @@ class ApplicationController < Sinatra::Base
     @recipe = Recipe.find(params[:id])
     if @recipe
       erb :show
-    else
-      redirect '/recipes'
     end
   end
 
